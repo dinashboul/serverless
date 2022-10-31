@@ -17,7 +17,7 @@ class handler(BaseHTTPRequestHandler):
             data = response.json()
             capital = data[0]['capital'][0]
             message = f"The capital of {dictionary ['country']} is {capital}"
-            
+
         elif 'capital' in dictionary :
             capital = dictionary ['capital']
             url ='https://restcountries.com/v3.1/capital/'
@@ -28,6 +28,7 @@ class handler(BaseHTTPRequestHandler):
 
         else:
             message = "Please provide me with a correct name"
+       
 
 
         self.send_response(200)
